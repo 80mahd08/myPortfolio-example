@@ -138,4 +138,35 @@ header
         .container
             div
                 text-align: center
-    
+main.projects
+    .container
+        display: grid
+        grid-template-columns:  repeat(auto-fill , minmax(380px, 2fr))
+        justify-content: center
+        place-items: center
+        grid-gap: 20px
+        .card
+            width: 100%
+            max-width: 520px
+            position: relative
+            img
+                width: 100%
+                height: 80%
+            .overlay
+                position: absolute
+                top: 0
+                background-color: #00000079
+                width: 100%
+                height: 80%
+                display: flex
+                flex-direction:  column
+                justify-content: center
+                align-items:  center
+                opacity: 0
+                transition:  all 0.5s 
+                a
+                    color: #ffffff
+                    text-decoration:  none
+                    border-bottom: 2px solid #4ee1a0
+                &:hover
+                    opacity: 1
