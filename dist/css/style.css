@@ -108,7 +108,6 @@ header .container .content a:hover {
 @media (max-width: 650px) {
   header .container {
     grid-template-columns: 1fr !important;
-    grid-template-rows: !important;
   }
   header .container .title {
     grid-column-start: 1 !important;
@@ -169,6 +168,7 @@ header .container .content a:hover {
   }
 }
 main.projects .container {
+  margin-top: 100px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(380px, 2fr));
   justify-content: center;
@@ -199,9 +199,24 @@ main.projects .container .card .overlay {
 }
 main.projects .container .card .overlay a {
   color: #ffffff;
+  transition: all 0.2s;
   text-decoration: none;
   border-bottom: 2px solid #4ee1a0;
 }
+main.projects .container .card .overlay a:hover {
+  color: #4ee1a0;
+}
 main.projects .container .card .overlay:hover {
   opacity: 1;
+}
+
+main.contact {
+  background-color: #242424;
+}
+main.contact .topPart .container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+main.contact .topPart .container form {
+  max-width: 75%;
 }/*# sourceMappingURL=style.css.map */

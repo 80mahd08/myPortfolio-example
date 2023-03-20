@@ -1,3 +1,4 @@
+@use '../../node_modules/fhf/dist/sass/FHF-mixins' as *
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap')
 *
     font-family: 'Space Grotesk', sans-serif
@@ -93,7 +94,6 @@ header
     header
         .container
             grid-template-columns: 1fr !important
-            grid-template-rows: !important
             .title
                 grid-column-start: 1 !important
                 grid-column-end: 3 !important
@@ -140,6 +140,7 @@ header
                 text-align: center
 main.projects
     .container
+        margin-top: 100px
         display: grid
         grid-template-columns:  repeat(auto-fill , minmax(380px, 2fr))
         justify-content: center
@@ -166,7 +167,20 @@ main.projects
                 transition:  all 0.5s 
                 a
                     color: #ffffff
+                    transition:  all 0.2s 
                     text-decoration:  none
                     border-bottom: 2px solid #4ee1a0
+                    &:hover
+                        color: #4ee1a0
                 &:hover
                     opacity: 1
+main.contact
+    background-color: #242424
+    .topPart
+        .container
+            display: flex
+            flex-direction: row-reverse
+            form
+                max-width: 75%
+    footer
+        .container
